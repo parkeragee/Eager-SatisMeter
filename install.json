@@ -1,0 +1,51 @@
+{
+  "resources": {
+    "body": [
+      {
+        "type": "script",
+        "src": "./eager-satismeter.js"
+      },
+      {
+        "type": "script",
+        "contents": "EagerSatisMeter.init(INSTALL_OPTIONS)"
+      }
+    ]
+  },
+  "options": {
+    "properties": {
+      "token": {
+        "order": 1,
+        "title": "SatisMeter Token",
+        "description": "Get this from the Settings: Install page inside the <a href=\"https://app.satismeter.com\" target=\"_blank\" class=\"with-inherited-color more\"><strong>SatisMeter</strong></a>",
+        "type": "string",
+        "placeholder": "A1B2C3D4E5F6G7H8", "default": "igRI3C3UDZuBfrkI"
+      },
+      "trackAnonymous": {
+        "order": 2,
+        "title": "Show SatisMeter to anonymous visitors",
+        "type": "boolean",
+        "default": true
+      },
+      "automaticUser": {
+        "order": 3,
+        "showIf": {
+          "trackAnonymous": false
+        },
+        "title": "Automatically detect logged in user information",
+        "description": "<strong>For developers:</strong> This works by iterating through all of the properties on the <code class=\"inline\">window</code> object, looking for any with an <code class=\"inline\">email</code> property. So for example, this detection would work if you had the following somewhere in your app’s code:<pre><code>window.user = {\n  id: 'a1b2c3d4',\n  email: 'user@email.com'\n  name: 'First Last'\n  created: '2015-09-26T22:49:13.124Z'\n};</code></pre>Uncheck this option to manually specify which exposed property to use.",
+        "type": "boolean",
+        "default": true
+      },
+      "manuallySpecifiedUser": {
+        "order": 4,
+        "showIf": {
+          "trackAnonymous": false,
+          "automaticUser": false
+        },
+        "title": "Global JavaScript expression which evaluates to the logged in users",
+        "type": "string",
+        "placeholder": "window.Eager.auth.currentUser"
+      }
+    }
+  }
+}
