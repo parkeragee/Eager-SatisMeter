@@ -18,7 +18,7 @@
         "title": "SatisMeter Token",
         "description": "Get this from the Settings: Install page inside the <a href=\"https://app.satismeter.com\" target=\"_blank\" class=\"with-inherited-color more\"><strong>SatisMeter</strong></a>",
         "type": "string",
-        "placeholder": "A1B2C3D4E5F6G7H8", "default": "igRI3C3UDZuBfrkI"
+        "placeholder": "A1B2C3D4E5F6G7H8"
       },
       "trackAnonymous": {
         "order": 2,
