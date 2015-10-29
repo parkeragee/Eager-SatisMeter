@@ -16,6 +16,7 @@ window.EagerSatisMeter = {
 
     var settings = {};
     settings.token = options.token;
+    settings.preview = INSTALL_ID === 'preview';
 
     if (options.trackAnonymous) {
       settings.trackAnonymous = true;
