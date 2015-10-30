@@ -1,9 +1,5 @@
 window.EagerSatisMeter = {
   init: function(options) {
-    if (!options.token) {
-      return;
-    }
-
     window.satismeter = window.satismeter || function() {
       (window.satismeter.q = window.satismeter.q || []).push(arguments);
     };
